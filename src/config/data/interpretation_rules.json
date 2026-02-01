@@ -1,0 +1,721 @@
+{
+  "metadata": {
+    "title": "Children's Drawing Interpretation - Feature-Based Rules for RAG",
+    "version": "2.0 - Restructured for Vision Pipeline",
+    "purpose": "Map visual features to psychological/developmental interpretations",
+    "sources": [
+      {
+        "title": "12 Must-Know Facts about Children's Drawing Interpretation",
+        "author": "Michal Wimmer",
+        "type": "practical_guide"
+      },
+      {
+        "title": "How To Read Children's Drawings",
+        "author": "Ani Zlateva",
+        "type": "academic_monograph",
+        "institution": "University of Malta"
+      }
+    ],
+    "structure": "visual_feature \u2192 interpretation_rule",
+    "usage": "For vision model output to psychological interpretation"
+  },
+  "feature_categories": [
+    "spatial_characteristics",
+    "line_quality",
+    "color_usage",
+    "developmental_stage",
+    "content_elements",
+    "distress_indicators",
+    "family_dynamics",
+    "social_relationships"
+  ],
+  "interpretation_rules": [
+    {
+      "rule_id": "SPATIAL_001",
+      "feature_name": "Large figures filling entire page",
+      "visual_indicators": {
+        "page_coverage_percent": ">70",
+        "figure_size": "large",
+        "placement": "center",
+        "empty_space": "minimal"
+      },
+      "interpretation": {
+        "primary_meaning": "Strong presence, confidence, desire to be noticed and involved",
+        "personality_indicators": [
+          "Extroverted personality",
+          "Confident and self-assured",
+          "Wants to be noticed/center of attention",
+          "High energy and engagement",
+          "Dominant personality traits"
+        ],
+        "emotional_state": "Positive - indicates engagement, confidence, and self-assurance",
+        "behavioral_correlates": [
+          "Wants to do things independently",
+          "Likes to be part of what's going on",
+          "Strong presence that cannot be ignored"
+        ]
+      },
+      "developmental_context": {
+        "age_2_to_3": "Normal for structured scribbling stage - fills entire pages",
+        "age_4_to_6": "Indicates strong personality, creativity, curiosity",
+        "age_7_plus": "Strong confidence and self-expression indicator"
+      },
+      "combine_with_features": {
+        "strong_pressure": "Very confident, willful, possibly rebellious child",
+        "red_color": "High energy, dominant, competitive, wants to win",
+        "many_details": "Creative, curious, observant, intelligent child",
+        "bright_colors": "Happy, emotionally stable, confident"
+      },
+      "contrast_with": "Small figures at edges = opposite meaning (social difficulty)",
+      "clinical_significance": "Generally positive indicator",
+      "importance": "high",
+      "category": "spatial",
+      "source_references": [
+        "Wimmer: Section 8, Dana case study",
+        "Wimmer: Section 4, Natalie case study",
+        "Zlateva: Section 3.3, ages 5-7"
+      ]
+    },
+    {
+      "rule_id": "SPATIAL_002",
+      "feature_name": "Small figures at edge of page with empty center",
+      "visual_indicators": {
+        "page_coverage_percent": "<30",
+        "figure_size": "small or tiny",
+        "placement": "edges (left, right, top, or bottom)",
+        "empty_space": "large empty center area"
+      },
+      "interpretation": {
+        "primary_meaning": "Difficulty in social interaction, feels presence is not meaningful to others",
+        "personality_indicators": [
+          "Socially withdrawn or rejected",
+          "Low self-confidence",
+          "Feelings of insignificance",
+          "Insecure about social position",
+          "May feel unloved or unnoticed"
+        ],
+        "emotional_state": "Negative - indicates social difficulty or emotional distress",
+        "behavioral_correlates": [
+          "Difficulty making friends",
+          "Feels excluded from peer groups",
+          "Low self-esteem",
+          "Social anxiety"
+        ]
+      },
+      "developmental_context": {
+        "all_ages": "Not developmentally appropriate at any age - requires attention"
+      },
+      "combine_with_features": {
+        "weak_pressure": "Severe lack of confidence and helplessness",
+        "few_colors": "Emotional withdrawal or depression possible",
+        "trembling_lines": "Significant emotional distress"
+      },
+      "clinical_significance": "CRITICAL - Potential indicator of social rejection or distress",
+      "recommended_action": "Monitor over time with multiple drawings (6+ months). Consider professional consultation.",
+      "importance": "critical",
+      "category": "spatial",
+      "source_references": [
+        "Wimmer: Section 10.5 - Indicator 3",
+        "Wimmer: Section 9.5 - Social rejection"
+      ]
+    },
+    {
+      "rule_id": "SPATIAL_003",
+      "feature_name": "Baseline/Frieze composition (figures on bottom edge)",
+      "visual_indicators": {
+        "placement": "aligned on bottom edge of page",
+        "baseline_present": true,
+        "figures_touching_line": true,
+        "horizontal_arrangement": true
+      },
+      "interpretation": {
+        "primary_meaning": "Normal developmental stage - seeks balance, stability, and security",
+        "personality_indicators": [
+          "Organized thinking",
+          "Seeks security and stability",
+          "Concrete thinking style",
+          "Follows rules and conventions"
+        ],
+        "emotional_state": "Neutral to positive - normal developmental indicator",
+        "developmental_significance": "Typical and expected behavior"
+      },
+      "developmental_context": {
+        "age_4_to_5": "Beginning to appear - first attempts at spatial organization",
+        "age_5_to_7": "Very common - symbolism/narrative stage",
+        "age_7_to_9": "Still present - gradual transition to perspective",
+        "age_9_plus": "Should begin transitioning to perspective drawing"
+      },
+      "clinical_notes": "This is developmentally appropriate and NOT a concern. Creates feeling of security for child.",
+      "importance": "medium",
+      "category": "spatial",
+      "source_references": [
+        "Zlateva: Section 3.3",
+        "Wimmer: Section 6.3"
+      ]
+    },
+    {
+      "rule_id": "SPATIAL_004",
+      "feature_name": "Floating objects (no spatial organization)",
+      "visual_indicators": {
+        "no_baseline": true,
+        "scattered_placement": true,
+        "random_orientation": true,
+        "overlapping_without_logic": true
+      },
+      "interpretation": {
+        "age_dependent": true,
+        "primary_meaning": "Age-dependent: Normal for young children, may indicate issues if older"
+      },
+      "developmental_context": {
+        "age_1_to_3": "Normal - scribble stage, no spatial awareness expected",
+        "age_3_to_5": "Normal - pre-representational to early representational",
+        "age_5_plus": "May indicate developmental delay, emotional distress, or disorganization"
+      },
+      "clinical_significance": "Only concerning if persists beyond age 5",
+      "importance": "medium",
+      "category": "spatial"
+    },
+    {
+      "rule_id": "SPATIAL_005",
+      "feature_name": "Transparency (X-ray vision) - seeing through objects",
+      "visual_indicators": {
+        "objects_showing_through_others": true,
+        "example": "legs visible through horse body, people visible in house"
+      },
+      "interpretation": {
+        "primary_meaning": "'Intellectualism' - child draws what they KNOW, not what they SEE",
+        "developmental_significance": "Normal cognitive stage - represents knowledge over perception"
+      },
+      "developmental_context": {
+        "age_5_to_7": "Very common and completely normal",
+        "age_7_plus": "Should gradually decrease as visual realism develops"
+      },
+      "clinical_notes": "NOT a concern - natural developmental phase",
+      "importance": "low",
+      "category": "spatial",
+      "source_references": [
+        "Zlateva: Section 3.3 - Vygotsky's intellectualism",
+        "Zlateva: X-ray seeing examples"
+      ]
+    },
+    {
+      "rule_id": "LINE_001",
+      "feature_name": "Strong pressure, bold lines",
+      "visual_indicators": {
+        "pressure_level": "strong or very_strong",
+        "line_characteristics": "confident, firm, bold",
+        "may_pierce_paper": true,
+        "indentations_visible": true
+      },
+      "interpretation": {
+        "primary_meaning": "Confidence, willfulness, strong personality, desire for control",
+        "personality_indicators": [
+          "Confident and assertive",
+          "Willful and wants independence",
+          "Strong presence and energy",
+          "May be rebellious",
+          "Dominant personality"
+        ],
+        "emotional_state": "Positive when balanced; may indicate frustration/anger if excessive",
+        "behavioral_correlates": [
+          "Wants to do things their own way",
+          "Resists being told what to do",
+          "High energy level",
+          "Strong opinions"
+        ]
+      },
+      "combine_with_features": {
+        "large_figures": "Very confident, dominant, possibly aggressive",
+        "red_color": "High energy, competitive, wants to be winner",
+        "center_placement": "Strong self-assurance and presence",
+        "piercing_paper": "Possible anger or frustration - monitor"
+      },
+      "warning_signs": {
+        "excessive_pressure": "If repeatedly pierces paper, may indicate anger issues",
+        "with_aggression_themes": "Combined with violent content requires attention"
+      },
+      "clinical_significance": "Generally positive; monitor if excessive",
+      "importance": "high",
+      "category": "line_quality",
+      "source_references": [
+        "Wimmer: Section 4.1 - Natalie case",
+        "Wimmer: Section 2.1 - Pressure analysis"
+      ]
+    },
+    {
+      "rule_id": "LINE_002",
+      "feature_name": "Weak pressure, faint lines",
+      "visual_indicators": {
+        "pressure_level": "weak or very_weak",
+        "line_characteristics": "hesitant, unsure, barely visible",
+        "faint_appearance": true
+      },
+      "interpretation": {
+        "primary_meaning": "Lack of confidence, sense of helplessness coping with outside world",
+        "personality_indicators": [
+          "Insecure and lacks self-confidence",
+          "Shy and withdrawn",
+          "Feels helpless or powerless",
+          "Low self-esteem",
+          "Uncertain about abilities"
+        ],
+        "emotional_state": "Negative - indicates low self-esteem, anxiety, or depression",
+        "behavioral_correlates": [
+          "Difficulty asserting self",
+          "Avoids taking risks",
+          "Seeks constant approval",
+          "Fears making mistakes"
+        ]
+      },
+      "important_exclusion": {
+        "check_first": "Rule out low muscle tone (physiological cause)",
+        "medical_consideration": "If child has physical weakness, this may not be psychological"
+      },
+      "clinical_significance": "HIGH - Possible distress indicator if not physiological",
+      "recommended_action": "Check for physiological causes first, then monitor emotional state",
+      "importance": "high",
+      "category": "line_quality",
+      "source_references": [
+        "Wimmer: Section 10.4 - Indicator 2"
+      ]
+    },
+    {
+      "rule_id": "LINE_003",
+      "feature_name": "Trembling, broken, or discontinuous lines",
+      "visual_indicators": {
+        "line_type": "trembling, broken, interrupted",
+        "line_quality": "disrupted, meandering, shaky",
+        "inconsistent_execution": true
+      },
+      "interpretation": {
+        "primary_meaning": "Emotional difficulty, anxiety, possibly fear or distress",
+        "personality_indicators": [
+          "Anxious and fearful",
+          "Emotionally struggling",
+          "Uncertain and unstable",
+          "Processing difficult emotions"
+        ],
+        "emotional_state": "Negative - indicates emotional coping difficulties",
+        "behavioral_correlates": [
+          "May have experienced trauma",
+          "Difficulty managing emotions",
+          "Fearful or worried",
+          "Insecure attachment"
+        ]
+      },
+      "clinical_significance": "CRITICAL - Strong indicator of emotional distress",
+      "recommended_action": "Professional consultation recommended",
+      "importance": "critical",
+      "category": "line_quality",
+      "source_references": [
+        "Wimmer: Section 9.5 - Complex emotional coping"
+      ]
+    },
+    {
+      "rule_id": "LINE_004",
+      "feature_name": "Overly rigid, stereotypical, controlled drawing",
+      "visual_indicators": {
+        "line_quality": "rigid, controlled, perfect",
+        "stereotypical_forms": true,
+        "excessive_erasures": true,
+        "fear_of_mistakes": true,
+        "no_spontaneity": true
+      },
+      "interpretation": {
+        "primary_meaning": "Anxiety, perfectionism, difficulty coping with unexpected situations",
+        "personality_indicators": [
+          "Perfectionist tendencies",
+          "Anxious about performance",
+          "Controlling behavior",
+          "Fearful of failure",
+          "Rigid thinking patterns"
+        ],
+        "emotional_state": "Negative - indicates performance anxiety and stress",
+        "behavioral_correlates": [
+          "Loses temper when unable to complete perfectly",
+          "Extremely careful not to go outside lines",
+          "Fastidious about neatness",
+          "Difficulty with flexibility"
+        ]
+      },
+      "clinical_significance": "HIGH - Indicates anxiety and control issues",
+      "importance": "high",
+      "category": "line_quality",
+      "source_references": [
+        "Wimmer: Section 10.6 - Indicator 4"
+      ]
+    },
+    {
+      "rule_id": "COLOR_001",
+      "feature_name": "Dominant red color usage",
+      "visual_indicators": {
+        "dominant_color": "red",
+        "usage_frequency": "consistent across multiple drawings",
+        "preference": "actively chooses red"
+      },
+      "interpretation": {
+        "primary_meaning": "Enthusiasm, energy, dominant and extroverted personality",
+        "personality_indicators": [
+          "Dominant and extroverted",
+          "Likes to be center of attention",
+          "High energy and vitality",
+          "Competitive nature",
+          "Wants to be winner"
+        ],
+        "emotional_state": "Positive - indicates vitality and engagement",
+        "behavioral_correlates": [
+          "Likes challenges",
+          "Enjoys competitions",
+          "First to come to mind when discussing colors",
+          "Strong presence"
+        ]
+      },
+      "warning": {
+        "excessive_use": "Common among aggressive children",
+        "monitor_if": "Combined with violence themes or excessive pressure"
+      },
+      "importance": "high",
+      "category": "color",
+      "source_references": [
+        "Wimmer: Section 7.3"
+      ]
+    },
+    {
+      "rule_id": "COLOR_002",
+      "feature_name": "Dominant blue color usage",
+      "visual_indicators": {
+        "dominant_color": "blue",
+        "usage_frequency": "consistent"
+      },
+      "interpretation": {
+        "primary_meaning": "Calm, peaceful behavior with harmonious social relations",
+        "personality_indicators": [
+          "Calm and peaceful",
+          "Rational thinker",
+          "Harmonious social relations",
+          "Pleasant communication style",
+          "Rich inner world"
+        ],
+        "behavioral_correlates": [
+          "Demands rational explanations",
+          "Refuses 'because I said so' answers",
+          "Needs to express wishes and desires",
+          "Thoughtful and reflective"
+        ]
+      },
+      "importance": "high",
+      "category": "color",
+      "source_references": [
+        "Wimmer: Section 7.4"
+      ]
+    },
+    {
+      "rule_id": "COLOR_003",
+      "feature_name": "Dominant green color usage",
+      "visual_indicators": {
+        "dominant_color": "green",
+        "usage_frequency": "consistent"
+      },
+      "interpretation": {
+        "primary_meaning": "Nature-lover with fresh outlook, quick learner",
+        "personality_indicators": [
+          "Nature-loving",
+          "Fresh perspective on situations",
+          "Quick learner",
+          "Needs freedom and space"
+        ],
+        "behavioral_correlates": [
+          "Likes animals",
+          "Enjoys outdoor play",
+          "Different and original thinking"
+        ]
+      },
+      "importance": "medium",
+      "category": "color",
+      "source_references": [
+        "Wimmer: Section 7.5"
+      ]
+    },
+    {
+      "rule_id": "COLOR_004",
+      "feature_name": "Dominant black color - MYTH BUSTER",
+      "visual_indicators": {
+        "dominant_color": "black",
+        "usage_frequency": "exclusive or dominant"
+      },
+      "interpretation": {
+        "primary_meaning": "MYTH DEBUNKED: Does NOT indicate depression",
+        "myth_status": "FALSE",
+        "actual_reasons": [
+          "May be only color available",
+          "Likes strong contrast with white page",
+          "Creates most visible marks"
+        ],
+        "evidence": "Children in Ghetto Theresienstadt used bright colors despite terrible conditions"
+      },
+      "clinical_significance": "NOT a depression indicator by itself - must have other indicators",
+      "importance": "critical",
+      "category": "color_myths",
+      "source_references": [
+        "Wimmer: Section 5, Myth #1"
+      ]
+    },
+    {
+      "rule_id": "COLOR_005",
+      "feature_name": "Many bright colors filling page",
+      "visual_indicators": {
+        "color_variety": "multiple colors",
+        "saturation": "bright, vivid colors",
+        "coverage": "fills entire page"
+      },
+      "interpretation": {
+        "primary_meaning": "Happy, confident, emotionally stable child",
+        "personality_indicators": [
+          "Creative and expressive",
+          "Curious about world",
+          "Emotionally stable",
+          "Confident and secure",
+          "Feels loved"
+        ],
+        "emotional_state": "Very positive - indicates happiness and security",
+        "developmental_context": "Typical of ages 5-7 in loved, secure children"
+      },
+      "importance": "high",
+      "category": "color",
+      "source_references": [
+        "Zlateva: Section 3.3"
+      ]
+    },
+    {
+      "rule_id": "DISTRESS_001",
+      "feature_name": "Sudden regression to earlier developmental stage",
+      "visual_indicators": {
+        "regression_evident": true,
+        "example": "6-year-old suddenly drawing like 3-year-old",
+        "comparison_needed": "requires previous drawings for comparison"
+      },
+      "interpretation": {
+        "primary_meaning": "Protection mechanism - returns to familiar, safer stage during stress",
+        "significance": "CLEAR indicator of fear or distress",
+        "behavioral_correlates": [
+          "May also regress in other behaviors (bedwetting, pacifier)",
+          "Experiencing significant stress or trauma",
+          "Seeking emotional safety"
+        ]
+      },
+      "clinical_significance": "CRITICAL - Strong distress indicator",
+      "requirements": "Must have previous drawings to establish baseline",
+      "recommended_action": "Professional consultation recommended",
+      "importance": "critical",
+      "category": "distress_indicators",
+      "source_references": [
+        "Wimmer: Section 10.3 - Indicator 1",
+        "Wimmer: Section 6.1 - Divergence from personal sequence"
+      ]
+    },
+    {
+      "rule_id": "DISTRESS_002",
+      "feature_name": "Shading or heavy marks on human figures or body parts",
+      "visual_indicators": {
+        "shading_present": true,
+        "target_areas": [
+          "entire face",
+          "genital area",
+          "specific body parts"
+        ],
+        "heavy_marks": true
+      },
+      "interpretation": {
+        "primary_meaning": "CRITICAL - Could suggest sexual abuse or sense of rejection",
+        "significance": "Requires immediate professional attention"
+      },
+      "clinical_significance": "CRITICAL - Possible abuse indicator",
+      "recommended_action": "Immediate professional consultation required",
+      "importance": "critical",
+      "category": "distress_indicators",
+      "source_references": [
+        "Wimmer: Section 10.7 - Indicator 5"
+      ]
+    },
+    {
+      "rule_id": "DISTRESS_003",
+      "feature_name": "Multiple distress indicators combined",
+      "visual_indicators": {
+        "multiple_present": true,
+        "examples": [
+          "regression + weak pressure",
+          "edge placement + trembling lines",
+          "small figures + limited colors"
+        ]
+      },
+      "interpretation": {
+        "primary_meaning": "Multiple indicators increase concern level significantly",
+        "clinical_protocol": [
+          "Single indicator: Monitor over time",
+          "Two indicators: Close monitoring needed",
+          "Three+ indicators: Professional consultation recommended"
+        ]
+      },
+      "critical_rule": "Multiple drawings over 6+ months required for accurate assessment",
+      "importance": "critical",
+      "category": "distress_indicators",
+      "source_references": [
+        "Wimmer: Section 5.1 - Analysis requirements"
+      ]
+    },
+    {
+      "rule_id": "DEV_001",
+      "feature_name": "Scribble stage characteristics",
+      "visual_indicators": {
+        "random_marks": true,
+        "no_recognizable_forms": true,
+        "may_go_off_page": true
+      },
+      "interpretation": {
+        "age_range": "15 months - 3 years",
+        "stage_name": "Pre-representational (Scribble stage)",
+        "characteristics": [
+          "Motor exploration of materials",
+          "No spatial awareness",
+          "Process more important than result"
+        ]
+      },
+      "importance": "medium",
+      "category": "developmental",
+      "source_references": [
+        "Zlateva: Section 3.1"
+      ]
+    },
+    {
+      "rule_id": "DEV_002",
+      "feature_name": "Tadpole figures (head with legs, no body)",
+      "visual_indicators": {
+        "head_present": true,
+        "legs_attached_to_head": true,
+        "no_body": true
+      },
+      "interpretation": {
+        "age_range": "3-5 years",
+        "stage_name": "Beginning of representational drawing",
+        "developmental_significance": "First meaningful images - normal and expected"
+      },
+      "importance": "medium",
+      "category": "developmental",
+      "source_references": [
+        "Zlateva: Section 3.2",
+        "Wimmer: Section 6.3"
+      ]
+    },
+    {
+      "rule_id": "DEV_003",
+      "feature_name": "Detailed figures with body, limbs, facial features",
+      "visual_indicators": {
+        "body_two_dimensional": true,
+        "proportions_improving": true,
+        "facial_details_present": true,
+        "clothing_depicted": true
+      },
+      "interpretation": {
+        "age_range": "5-7 years",
+        "stage_name": "Symbolism/Narrative stage",
+        "developmental_significance": "Normal progression, good observation skills"
+      },
+      "importance": "medium",
+      "category": "developmental",
+      "source_references": [
+        "Zlateva: Section 3.3"
+      ]
+    },
+    {
+      "rule_id": "SYMBOL_001",
+      "feature_name": "House with locks, fences, or barriers",
+      "visual_indicators": {
+        "locks_on_doors": true,
+        "fences_around_house": true,
+        "barriers_present": true,
+        "thick_walls": true
+      },
+      "interpretation": {
+        "primary_meaning": "Need for protection, emotional insecurity, creating boundaries",
+        "personality_indicators": [
+          "Feels need for protection",
+          "May feel threatened",
+          "Creating emotional boundaries",
+          "Difficulty with trust"
+        ]
+      },
+      "developmental_context": "Can be response to family changes (divorce, relocation)",
+      "importance": "high",
+      "category": "symbolic_content",
+      "source_references": [
+        "Wimmer: Section 11.5"
+      ]
+    },
+    {
+      "rule_id": "SYMBOL_002",
+      "feature_name": "Tree symbolism - roots, trunk, canopy",
+      "visual_indicators": {
+        "roots": "represents past, family relationships",
+        "trunk": "represents personality, ability to withstand stress",
+        "canopy": "represents potential realization, future"
+      },
+      "interpretation": {
+        "roots_absent": "Disconnection from past or family",
+        "trunk_weak": "Difficulty withstanding life challenges",
+        "canopy_small": "Limited view of potential or future",
+        "canopy_large_proportional": "Rich, balanced life with strong foundation"
+      },
+      "importance": "medium",
+      "category": "symbolic_content",
+      "source_references": [
+        "Wimmer: Section 12.2"
+      ]
+    }
+  ],
+  "usage_guidelines": {
+    "critical_principles": [
+      "NEVER rely on single indicator - always cross-reference multiple features",
+      "Requires multiple drawings over 6+ months minimum for accurate assessment",
+      "Age context is essential - same feature means different things at different ages",
+      "Always check for physiological causes before psychological interpretation",
+      "Parental involvement is critical for full understanding"
+    ],
+    "interpretation_process": [
+      "1. Extract visual features from drawing",
+      "2. Look up each feature in rules database",
+      "3. Cross-reference multiple features",
+      "4. Consider age and developmental stage",
+      "5. Check for feature combinations",
+      "6. Synthesize into coherent interpretation",
+      "7. Flag any critical indicators for professional attention"
+    ],
+    "confidence_levels": {
+      "high": "Feature explicitly matches rule with clear context",
+      "medium": "Feature partially matches, needs additional context",
+      "low": "Feature ambiguous, requires more information"
+    }
+  },
+  "debunked_myths": [
+    {
+      "myth": "Black color means depression",
+      "reality": "False - often chosen for contrast or availability",
+      "evidence": "Children in terrible conditions used bright colors"
+    },
+    {
+      "myth": "Scribbles are meaningless",
+      "reality": "False - show pressure, style, character differences"
+    },
+    {
+      "myth": "Not liking to draw means motor problems",
+      "reality": "Partly true - many reasons including preference, intervention, criticism"
+    },
+    {
+      "myth": "Birds and bars indicate distress",
+      "reality": "False - research shows non-significant correlation"
+    },
+    {
+      "myth": "Drawing subject indicates feelings",
+      "reality": "False - monsters don't mean fear, line quality matters more"
+    }
+  ]
+}
